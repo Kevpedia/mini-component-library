@@ -58,7 +58,7 @@ const IconWrapper = styled.div`
 
 const Input = styled.input`
   border: none;
-  border-bottom: 2px solid ${COLORS.black};
+  border-bottom: 1px solid ${COLORS.black};
   width: var(--width);
   font-size: var(--font-size);
   padding-left: var(--padding-left);
