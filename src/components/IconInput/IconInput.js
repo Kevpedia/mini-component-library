@@ -6,7 +6,14 @@ import { COLORS } from '../../constants';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 
-const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
+const IconInput = ({
+  label,
+  icon,
+  width = 250,
+  size,
+  placeholder,
+  ...delegated
+}) => {
   const SIZES = {
     small: {
       fontSize: 14 / 16 + 'rem',
@@ -30,7 +37,7 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
       <VisuallyHidden>
         <label for={label}>{label}</label>
       </VisuallyHidden>
-      <Input id={label} placeholder={label}></Input>
+      <Input id={label} placeholder={label} {...delegated}></Input>
       <IconWrapper>
         <Icon id={icon} size={SIZES[size].iconSize} strokeWidth={2} />
       </IconWrapper>
